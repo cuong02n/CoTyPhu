@@ -1,4 +1,4 @@
-namespace CoTyPhu;
+namespace CoTyPhu.client;
 
 public class control {
     public static int player = 0;
