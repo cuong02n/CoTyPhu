@@ -1,13 +1,15 @@
 using System.Numerics;
 
-namespace CoTyPhu.Model; 
+namespace CoTyPhu.Model;
 
-public class game {
-    public int STT_PLAYER;
-    public int player_number;
-    public int size_plot;
-    public Vector<int> alive_player = new Vector<int>();
-    public info_player[] Players = new info_player[6];
-    public int turn;
-    
+namespace game {
+    public static class game {
+        public static int STT_PLAYER;
+        public static int number_of_players;
+        public static int number_of_alives;
+        public static int size_plot;
+        public static bool[] alive = new bool[6];
+        public static player[] Players = new player[6];
+        public static int turn;
+    }
 }

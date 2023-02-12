@@ -2,7 +2,7 @@ using System.Numerics;
 
 namespace CoTyPhu.Model; 
 
-public class info_player {
+public class player {
     private string IP { get; set; }
     private string STT { get; set; }
     private string money { get; set; }

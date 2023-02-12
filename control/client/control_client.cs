@@ -1,17 +1,22 @@
 using CoTyPhu.Model;
+using CoTyPhu.view;
+using CoTyPhu.Model.game;
 
 namespace CoTyPhu.client;
 
 public class control_client {
-    public KeyValuePair<int,int> random_dice() {
+    public int[] map =
+        { 0, 1, 1, 1, 2, 3, 3, 3, 4, 5, 5, 5, 6, 7, 7, 7, 8, 9, 9, 9, 10, 11, 11, 11, 12, 13, 13, 13, 14, 15, 15, 15 };
+
+    public KeyValuePair<int, int> random_dice() {
         Random r = new Random();
         int x = r.Next(1, 6);
         int y = r.Next(1, 6);
-        return new KeyValuePair<int, int>(x,y);
+        return new KeyValuePair<int, int>(x, y);
     }
 
-    public void imprison() {
-        //TODO
+    public void imprison(int STT) {
+        // TODO
     }
 
     public ticket random_ticket() {
@@ -20,41 +25,39 @@ public class control_client {
         return new ticket();
         // TODO
     }
-    public int handle_turn(int player_turn, int dice1, int dice2) {
-        return player_turn + (dice1 == dice2 ? 0 : 1);
-        
+
+    public int get_turn(int player_turn, int dice1, int dice2) {
+        if (dice1 == dice2) {
+            return player_turn;
+        }
+
+        for (int i = player_turn; i < game.number_of_players + player_turn; i++) {
+            if (game.alive[i]) {
+                return i % game.number_of_players;
+            }
+        }
     }
 
     public void startgame(game g) {
-        
     }
-    
+
     public void endgame() {
-        
     }
 
     public void sell() {
     }
 
     public void auction() {
-        
     }
 
     public void bet() {
-        
     }
 
     public void handle_map() {
-        
     }
 
-    public void send() {
-        
-    }
-
-    public void receive(int money,int player_from,int player_to) {
+    public void transfer(int money, int player_from, int player_to) {
         if (player_from >= 0) {
-           
         }
     }
 }
