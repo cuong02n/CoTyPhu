@@ -18,7 +18,7 @@ public class control_view {
     public void position() { 
     
     }
-    public void move() { 
+    public void move(int stt,int before,int after) { 
     
     }
     public void transfer() { 
@@ -37,4 +37,5 @@ public class control_view {
     public void render() { }
     public void start(int numberPlayer) { }
     public void endGame(int numberPlayer) { }
+    public void sellPlot() { }
 }
