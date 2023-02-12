@@ -21,5 +21,9 @@ public struct plot {
 }
 
 public struct ticket {
-    
+    public string type;
+
+    public ticket(string t) {
+        type = t;
+    }
 }

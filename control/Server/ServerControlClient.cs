@@ -2,6 +2,6 @@ using CoTyPhu.client;
 
 namespace CoTyPhu.Server; 
 
-public class server_control : control{
+public class ServerControlClient : control_client{
     
 }
