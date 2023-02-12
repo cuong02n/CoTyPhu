@@ -46,3 +46,4 @@ C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-wi
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\CoTyPhu.pdb
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.genruntimeconfig.cache
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\ref\CoTyPhu.dll
+C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.Properties.Resources.resources
