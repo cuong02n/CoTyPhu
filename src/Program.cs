@@ -1,7 +1,8 @@
 namespace CoTyPhu;
 
 class Program {
-    public KeyValuePair<int, string>[] player = new KeyValuePair<int,string>[6];
+    public const string ip = "192.168.1.1";
+        
     [STAThread]
     static void Main() {
         // To customize application configuration such as set high DPI settings or default font,
