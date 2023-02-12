@@ -33,4 +33,8 @@ public class control_view {
     public void teleport() { 
     
     }
+    public void changeColor(int color) { }
+    public void render() { }
+    public void start(int numberPlayer) { }
+    public void endGame(int numberPlayer) { }
 }
