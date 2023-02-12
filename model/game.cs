@@ -1,8 +1,6 @@
 using System.Numerics;
+using CoTyPhu.Model;
 
-namespace CoTyPhu.Model;
-
-namespace game {
     public static class game {
         public static int STT_PLAYER;
         public static int number_of_players;
@@ -12,4 +10,3 @@ namespace game {
         public static player[] Players = new player[6];
         public static int turn;
     }
-}

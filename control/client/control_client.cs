@@ -1,6 +1,5 @@
 using CoTyPhu.Model;
 using CoTyPhu.view;
-using CoTyPhu.Model.game;
 
 namespace CoTyPhu.client;
 
@@ -18,7 +17,6 @@ public class control_client {
     public void imprison(int STT) {
         // TODO
     }
-
     public ticket random_ticket() {
         Random r = new Random();
         int t = r.Next(0, 5);
@@ -36,9 +34,11 @@ public class control_client {
                 return i % game.number_of_players;
             }
         }
+
+        return -1;
     }
 
-    public void startgame(game g) {
+    public void startgame() {
     }
 
     public void endgame() {
