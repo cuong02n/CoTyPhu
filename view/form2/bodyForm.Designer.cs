@@ -1,6 +1,6 @@
 ﻿namespace CoTyPhu;
 
-partial class Form1 {
+partial class Body {
     /// <summary>
     ///  Required designer variable.
     /// </summary>
@@ -27,7 +27,7 @@ partial class Form1 {
     private void InitializeComponent() {
         this.components = new System.ComponentModel.Container();
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(800, 450);
+        this.ClientSize = new System.Drawing.Size(1366, 768);
         this.Text = "Form1";
     }
 
