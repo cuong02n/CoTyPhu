@@ -1,4 +1,4 @@
-namespace CoTyPhu.client;
+namespace CoTyPhu;
 
 class Program {
     public const string ip = "192.168.1.1";
