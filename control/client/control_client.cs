@@ -1,11 +1,15 @@
-using CoTyPhu.Model;
+using CoTyPhu.model;
 using CoTyPhu.view;
 
 namespace CoTyPhu.client;
 
 public class control_client {
-    public int[] map =
-        { 0, 1, 1, 1, 2, 3, 3, 3, 4, 5, 5, 5, 6, 7, 7, 7, 8, 9, 9, 9, 10, 11, 11, 11, 12, 13, 13, 13, 14, 15, 15, 15 };
+    public int[] map = {
+        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
+        -1, -1, -1, -1
+    };
+
+    //init plot TODO
 
     public KeyValuePair<int, int> random_dice() {
         Random r = new Random();
@@ -17,6 +21,7 @@ public class control_client {
     public void imprison(int STT) {
         // TODO
     }
+
     public ticket random_ticket() {
         Random r = new Random();
         int t = r.Next(0, 5);
@@ -54,6 +59,25 @@ public class control_client {
     }
 
     public void handle_map() {
+        for (int i = 0; i < 32; i++) {
+            if (map[i] < 0) {
+                break;
+            }
+
+            int same = 0;
+            for (int j = i + 1; j < 32; j++) {
+                if (map[i] == map[j]) {
+                    same++;
+                } else {
+                    // het lien tuc roi
+                    if (same >= 3) {
+                        for (int k = i; k < j; k++) {
+                            game.Plots[k].multiple = 0.7f;
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public void transfer(int money, int player_from, int player_to) {

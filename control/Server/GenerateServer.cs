@@ -1,5 +1,5 @@
 using CoTyPhu.client;
-using CoTyPhu.Model;
+using CoTyPhu.model;
 
 namespace CoTyPhu.Server; 
 

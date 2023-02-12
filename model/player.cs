@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace CoTyPhu.Model; 
+namespace CoTyPhu.model; 
 
 public class player {
     private string IP { get; set; }
@@ -9,15 +9,24 @@ public class player {
     private string color { get; set; }
     public int position;
     public int consecutive_dice;
-    public Vector<plot> plots = new Vector<plot>();
-    public Vector<ticket> tickets = new Vector<ticket>();
-}
+    public Vector<int> plots = new();// pos
+    public Vector<ticket> tickets = new();
+}   
 
 public struct plot {
     public int STT;
     public int owner;
     public string name;
     public int level;
+    public float multiple;
+
+    public plot(int STT, int owner, string name, int level, float multiple) {
+        this.STT = STT;
+        this.owner = owner;
+        this.name = name;
+        this.level = level;
+        this.multiple = multiple;
+    }
 }
 
 public struct ticket {
