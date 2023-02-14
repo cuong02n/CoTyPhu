@@ -48,9 +48,7 @@ public class control_client {
 
     public void endgame() {
     }
-
-    public void sell() {
-    }
+    
 
     public void auction() {
     }
@@ -75,6 +73,8 @@ public class control_client {
                             game.Plots[k].multiple = 0.7f;
                         }
                     }
+
+                    break;
                 }
             }
         }
@@ -83,5 +83,19 @@ public class control_client {
     public void transfer(int money, int player_from, int player_to) {
         if (player_from >= 0) {
         }
+        // TODO
+    }
+    
+    public void handle_move() {
+        // 4 consecutive move : imprison
+        // goto auction plot: auction or not
+        // goto imprison: imprison
+        // handle imprison
+        // out of plot 0: reward
+        // other plot: 
+        // my plot
+        // random event
+        // teleport
+        
     }
 }

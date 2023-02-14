@@ -2,6 +2,7 @@ using System.Numerics;
 using CoTyPhu.model;
 
 public static class game {
+    public static string[] Event = new string[10];
     public static int STT_PLAYER;
     public static int number_of_players;
     public static int number_of_alives;
