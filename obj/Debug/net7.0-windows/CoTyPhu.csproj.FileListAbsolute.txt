@@ -47,3 +47,7 @@ C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-wi
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.genruntimeconfig.cache
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\ref\CoTyPhu.dll
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.Properties.Resources.resources
+C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\Guna.UI2.dll
+C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\System.Management.dll
+C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.CopyComplete
