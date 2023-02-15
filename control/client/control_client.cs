@@ -48,7 +48,7 @@ public class control_client {
 
     public void endgame() {
     }
-    
+
 
     public void auction() {
     }
@@ -85,7 +85,7 @@ public class control_client {
         }
         // TODO
     }
-    
+
     public void handle_move() {
         // 4 consecutive move : imprison
         // goto auction plot: auction or not
@@ -96,6 +96,5 @@ public class control_client {
         // my plot
         // random event
         // teleport
-        
     }
 }
