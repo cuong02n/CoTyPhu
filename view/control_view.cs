@@ -1,13 +1,17 @@
 namespace CoTyPhu.view; 
 
 public class control_view {
-    public static void rollTheDice()
+    public static void rollTheDice(int dice1,int dice2)
     {
 
     }
     public static void jail()
     {
 
+    }
+
+    public static void imprison(int STT, int plot) {
+        
     }
     public static void randomEvent() {
 
@@ -42,7 +46,7 @@ public class control_view {
     public static void start(int numberPlayer) {
     
     }
-    public static void endGame(int numberPlayer) { 
+    public static void endGame() { 
     
     }
     public static void sellPlot() {

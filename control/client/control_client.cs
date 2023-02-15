@@ -17,16 +17,16 @@ public class control_client {
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5
     // frontend.tungxx()
-    public static KeyValuePair<int, int> random_dice() {
+    public static void random_dice() {
         Random r = new Random();
         int x = r.Next(1, 6);
         int y = r.Next(1, 6);
-        return new KeyValuePair<int, int>(x, y);
-        // tungxx
+        control_view.rollTheDice(x,y);
     }
 
     public static void imprison(int STT) {
         // TODO
+        control_view.imprison(STT,game.Players[STT].position);
     }
 
     public static ticket random_ticket() {
@@ -51,14 +51,16 @@ public class control_client {
     }
 
     public static  void startgame() {
-        
+        control_view.start(game.number_of_players);
     }
 
     public static void endgame() {
+        control_view.endGame();
     }
 
 
     public static void auction() {
+        
     }
 
     public static void bet() {
