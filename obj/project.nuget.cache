@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "89PiVAT5RhaJbXTaXRxiXpod7i3Vfh2UIqyMzeMCF3S04O72HewDiSjgST2kx1vFpAmX2tK7IhgTxrlLYpgF6w==",
+  "dgSpecHash": "0Jbj7lPC6zjNJaJzIWcVQZwo2LTm8audrKulBm8Qr/J2oWQ6uqvcZ1pq2qY7vf0ICeummVEzmzzpdrmSlhfA8w==",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\COZE\\C#\\CoTyPhu\\CoTyPhu.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\guna.ui2.winforms\\2.0.4.2\\guna.ui2.winforms.2.0.4.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.management\\6.0.0\\system.management.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }
