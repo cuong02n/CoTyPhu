@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CoTyPhu.client;
+
 
 namespace CoTyPhu.view
 {
@@ -27,17 +29,13 @@ namespace CoTyPhu.view
 
 
         int count =0;
-        private void timer1_auto(object sender, EventArgs e)
-        {
-            int valueDice1 = rd.Next(1, 6);
-            int valueDice2 = rd.Next(1, 6);
-            dice1.Text = valueDice1 + " ";
-            dice2.Text = valueDice2 + " ";
-           
-            if(count >50)
-            { 
-                int move = valueDice1 + valueDice2;
-            labelMove.Text= move +"";
+        private void timer1_auto(object sender, EventArgs e) {
+            KeyValuePair<int, int> dice = control_client.random_dice();
+            dice1.Text = Convert.ToString(dice.Key);
+            dice2.Text = Convert.ToString(dice.Value);
+            if(count >50) {
+                int move = dice.Key + dice.Value;
+                labelMove.Text= move +"";
                 character.Location = new Point(595, 539);
                 timer1.Stop();
             }

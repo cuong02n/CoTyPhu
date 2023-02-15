@@ -13,9 +13,9 @@ class Program {
     static void Main() {
         
         // client
-        Socket socket = new Socket(SocketType.Stream,ProtocolType.Tcp);
-        IPEndPoint ip = new IPEndPoint(ducmiip,port);
-        socket.Connect(ip);
+        // Socket socket = new Socket(SocketType.Stream,ProtocolType.Tcp);
+        // IPEndPoint ip = new IPEndPoint(ducmiip,port);
+        // socket.Connect(ip);
         
         
         

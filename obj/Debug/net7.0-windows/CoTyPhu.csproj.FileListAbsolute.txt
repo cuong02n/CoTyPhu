@@ -58,3 +58,7 @@ C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-wi
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Management.dll
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.CopyComplete
 >>>>>>> a4e0c1503553f6fd63bde1ed349e6ed76eebc045
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\bin\Debug\net7.0-windows\Guna.UI2.dll
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\bin\Debug\net7.0-windows\System.Management.dll
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Management.dll
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.CopyComplete
