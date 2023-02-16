@@ -6,24 +6,24 @@ using CoTyPhu.view;
 
 namespace CoTyPhu.client;
 
-    
-
 public class control_client {
-
     public static void init_UDP_client() {
         UdpClient client = new UdpClient(9999);
         IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
-        while (true) {
-           byte[] sender = Encoding.ASCII.GetBytes();
-           
-        }
+        Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.udp);
+        byte[] sender = Encoding.ASCII.GetBytes(control_view.get_name_room());
+        sk.SendTo(sender, ipEndPoint);
     }
-    
+
+    public static void init_UDP_server() {
+        UdpClient client = new UdpClient(9999);
+    }
+
     // TODO
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5
     // frontend.tungxx()
-    public static KeyValuePair<int,int> random_dice() {
+    public static KeyValuePair<int, int> random_dice() {
         Random r = new Random();
         int x = r.Next(1, 6);
         int y = r.Next(1, 6);
@@ -32,7 +32,7 @@ public class control_client {
 
     public static void imprison(int STT) {
         // TODO
-        control_view.imprison(STT,game.Players[STT].position);
+        control_view.imprison(STT, game.Players[STT].position);
     }
 
     public static ticket random_ticket() {
@@ -56,7 +56,7 @@ public class control_client {
         return -1;
     }
 
-    public static  void startgame() {
+    public static void startgame() {
         control_view.start(game.number_of_players);
     }
 
@@ -66,7 +66,6 @@ public class control_client {
 
 
     public static void auction() {
-        
     }
 
     public static void bet() {
@@ -87,12 +86,12 @@ public class control_client {
                     if (same >= 3) {
                         for (int k = i; k < j; k++) {
                             game.Plots[k].multiple = 0.7f;
-                            control_view.change_multiple(i,0.7f);
+                            control_view.change_multiple(i, 0.7f);
                         }
                     } else {
                         for (int k = i; k < j; k++) {
                             game.Plots[k].multiple = 1;
-                            control_view.change_multiple(i,1);
+                            control_view.change_multiple(i, 1);
                         }
                     }
 
@@ -125,9 +124,7 @@ public class control_client {
         // my plot
         // random event
         // teleport
-        
+
         // TODO
     }
-    
-    
 }
