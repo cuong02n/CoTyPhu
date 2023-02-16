@@ -13,6 +13,7 @@ namespace CoTyPhu.view
     public partial class mainForm : Form {
         public static userForm user;
         public static playForm _playForm;
+        public static waitingForm waitingForm;
         public mainForm()
         {
             InitializeComponent();

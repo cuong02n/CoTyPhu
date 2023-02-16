@@ -15,6 +15,8 @@ namespace CoTyPhu.view
         public waitingForm()
         {
             InitializeComponent();
+            nameView.Text = mainForm.user.tbUserName + "";
+            idView.Text = mainForm.user.tbRoomId + "";
         }
     }
 }
