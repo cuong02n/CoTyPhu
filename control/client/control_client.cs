@@ -1,3 +1,4 @@
+using System.Net;
 using CoTyPhu.model;
 using CoTyPhu.view;
 
@@ -6,22 +7,28 @@ namespace CoTyPhu.client;
     
 
 public class control_client {
+
+    public void control_client() {
+        IPAddress  ipaddr= IPAddress.Any;
+        IPEndPoint endpoint = new IPEndPoint(,9999)
+    }
+    
+    
     public static int[] map = {
         -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
         -1, -1, -1, -1
     };
 
-    //init plot TODO
-
-    // 
+    // TODO
+    
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5
     // frontend.tungxx()
-    public static void random_dice() {
+    public static KeyValuePair<int,int> random_dice() {
         Random r = new Random();
         int x = r.Next(1, 6);
         int y = r.Next(1, 6);
-        control_view.rollTheDice(x,y);
+        return new KeyValuePair<int, int>(x, y);
     }
 
     public static void imprison(int STT) {
