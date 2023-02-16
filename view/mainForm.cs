@@ -30,8 +30,8 @@ namespace CoTyPhu.view
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            playForm play = new playForm();
-            play.Show();
+            userForm user = new userForm();
+            user.Show();
         }
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)

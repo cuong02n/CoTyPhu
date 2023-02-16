@@ -9,7 +9,11 @@ public class control_view {
     {
 
     }
+    public static void checkName(String name)
+    {
 
+    }
+    public static void checkId(int id) { }
     public static void imprison(int STT, int plot) {
         
     }
