@@ -63,4 +63,14 @@ public class control_view {
     public static KeyValuePair<string,int> get_name_room() {
         return new KeyValuePair<string, int>("ok", 123);
     }
+
+    public static bool is_host(KeyValuePair<string ,int > name_room) {
+        // an nut create
+        return true;
+    }
+
+    public static bool is_member(KeyValuePair<string,int > nameroom) {
+        // an nut play
+        return true;
+    }
 }
