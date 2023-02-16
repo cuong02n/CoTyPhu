@@ -1,5 +1,7 @@
+using System.Diagnostics;
 using System.Net;
 using System.Net.Sockets;
+using System.Runtime.InteropServices;
 using System.Text;
 
 namespace CoTyPhu;
@@ -11,15 +13,10 @@ class Program {
     public const int port = 2905;
     [STAThread]
     static void Main() {
-        
-        // client
-        // Socket socket = new Socket(SocketType.Stream,ProtocolType.Tcp);
-        // IPEndPoint ip = new IPEndPoint(ducmiip,port);
-        // socket.Connect(ip);
-        
-        
-        
+
         ApplicationConfiguration.Initialize();
         Application.Run(new mainForm());
+        
+        
     }
 }

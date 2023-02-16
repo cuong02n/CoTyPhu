@@ -9,11 +9,6 @@ public class control_view {
     {
 
     }
-    public static void checkName(String name)
-    {
-
-    }
-    public static void checkId(int id) { }
     public static void imprison(int STT, int plot) {
         
     }
@@ -58,6 +53,10 @@ public class control_view {
     }
 
     public static void change_multiple(int plot,float f) {
+        
+    }
+
+    public static void go_to_room(int room, int number_of_player) {
         
     }
 }

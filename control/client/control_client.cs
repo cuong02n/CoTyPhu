@@ -1,3 +1,5 @@
+using System.Net;
+using System.Net.Sockets;
 using CoTyPhu.model;
 using CoTyPhu.view;
 
@@ -6,22 +8,19 @@ namespace CoTyPhu.client;
     
 
 public class control_client {
-    public static int[] map = {
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1
-    };
 
-    //init plot TODO
-
-    // 
+    public static void init_UDP_client() {
+        UdpClient client = new UdpClient(9999);
+    }
+    // TODO
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5
     // frontend.tungxx()
-    public static void random_dice() {
+    public static KeyValuePair<int,int> random_dice() {
         Random r = new Random();
         int x = r.Next(1, 6);
         int y = r.Next(1, 6);
-        control_view.rollTheDice(x,y);
+        return new KeyValuePair<int, int>(x, y);
     }
 
     public static void imprison(int STT) {
@@ -68,13 +67,13 @@ public class control_client {
 
     public static void handle_map() {
         for (int i = 0; i < 32; i++) {
-            if (map[i] < 0) {
+            if (game.Plots[i].owner < 0) {
                 break;
             }
 
             int same = 0;
             for (int j = i + 1; j < 32; j++) {
-                if (map[i] == map[j]) {
+                if (game.Plots[i].owner == game.Plots[j].owner) {
                     same++;
                 } else {
                     // het lien tuc roi
@@ -104,6 +103,11 @@ public class control_client {
         // TODO
     }
 
+    public bool check_room(int ID_room, string name) {
+        return true;
+    }
+
+
     public static void handle_move() {
         // 4 consecutive move : imprison
         // goto auction plot: auction or not
@@ -114,5 +118,9 @@ public class control_client {
         // my plot
         // random event
         // teleport
+        
+        // TODO
     }
+    
+    
 }
