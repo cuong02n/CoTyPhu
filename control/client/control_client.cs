@@ -1,5 +1,6 @@
 using System.Net;
 using System.Net.Sockets;
+using System.Text;
 using CoTyPhu.model;
 using CoTyPhu.view;
 
@@ -11,7 +12,13 @@ public class control_client {
 
     public static void init_UDP_client() {
         UdpClient client = new UdpClient(9999);
+        IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+        while (true) {
+           // byte[] sender = Encoding.ASCII.GetBytes( );
+           
+        }
     }
+    
     // TODO
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5

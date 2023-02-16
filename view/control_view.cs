@@ -59,4 +59,8 @@ public class control_view {
     public static void go_to_room(int room, int number_of_player) {
         
     }
+    
+    public static KeyValuePair<string,int> get_name_room() {
+        return new KeyValuePair<string, int>("ok", 123);
+    }
 }
