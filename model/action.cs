@@ -22,7 +22,12 @@ public class action {
                 //player rool the dice
                 // TODO
                 break;
-            
+            case "go_room":
+                // TODO
+                break;
+            case "out_room":
+                // TODO
+                break;
         }
     }
 }

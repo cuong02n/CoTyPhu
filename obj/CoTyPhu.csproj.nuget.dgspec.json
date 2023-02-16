@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PhamThuHang\\source\\repos\\project1_Co_Ty_Phu\\CoTyPhu\\CoTyPhu.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\COZE\\C#\\CoTyPhu\\CoTyPhu.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PhamThuHang\\source\\repos\\project1_Co_Ty_Phu\\CoTyPhu\\CoTyPhu.csproj": {
+    "C:\\Users\\Admin\\Desktop\\COZE\\C#\\CoTyPhu\\CoTyPhu.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PhamThuHang\\source\\repos\\project1_Co_Ty_Phu\\CoTyPhu\\CoTyPhu.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\COZE\\C#\\CoTyPhu\\CoTyPhu.csproj",
         "projectName": "CoTyPhu",
-        "projectPath": "C:\\Users\\PhamThuHang\\source\\repos\\project1_Co_Ty_Phu\\CoTyPhu\\CoTyPhu.csproj",
-        "packagesPath": "C:\\Users\\PhamThuHang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PhamThuHang\\source\\repos\\project1_Co_Ty_Phu\\CoTyPhu\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\COZE\\C#\\CoTyPhu\\CoTyPhu.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\COZE\\C#\\CoTyPhu\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PhamThuHang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

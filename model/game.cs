@@ -2,6 +2,7 @@ using System.Numerics;
 using System.Runtime.InteropServices;
 using CoTyPhu.model;
 [StructLayout(LayoutKind.Sequential)]
+[SerializableAttribute]
 public class game {
     public static string[] Event = new string[10];
     public static int STT_PLAYER;
