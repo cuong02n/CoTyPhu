@@ -33,5 +33,12 @@ namespace CoTyPhu.view
             mainForm._playForm = new playForm();
             mainForm._playForm.Show();
         }
+
+        private void createButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm.waitingForm = new waitingForm();
+            mainForm.waitingForm.Show();
+        }
     }
 }

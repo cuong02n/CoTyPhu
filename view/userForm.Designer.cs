@@ -33,6 +33,7 @@
             this.playButton = new System.Windows.Forms.Button();
             this.labelRoomId = new System.Windows.Forms.Label();
             this.tbRoomId = new System.Windows.Forms.TextBox();
+            this.createButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbUserName
@@ -79,11 +80,22 @@
             this.tbRoomId.TabIndex = 3;
             this.tbRoomId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // createButton
+            // 
+            this.createButton.Location = new System.Drawing.Point(451, 264);
+            this.createButton.Name = "createButton";
+            this.createButton.Size = new System.Drawing.Size(75, 23);
+            this.createButton.TabIndex = 5;
+            this.createButton.Text = "Create";
+            this.createButton.UseVisualStyleBackColor = true;
+            this.createButton.Click += new System.EventHandler(this.createButton_Click);
+            // 
             // userForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.createButton);
             this.Controls.Add(this.labelRoomId);
             this.Controls.Add(this.tbRoomId);
             this.Controls.Add(this.playButton);
@@ -103,5 +115,6 @@
         private Button playButton;
         private Label labelRoomId;
         public TextBox tbRoomId;
+        private Button createButton;
     }
 }
