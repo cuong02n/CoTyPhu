@@ -64,12 +64,12 @@ public class control_view {
         return new KeyValuePair<string, int>(mainForm.user.tbUserName.Text,Int32.Parse(mainForm.user.tbRoomId.Text));
     }
 
-    public static bool is_host(KeyValuePair<string ,int > name_room) {
+    public static bool is_host(string name,int room) {
         // an nut create
         return true;
     }
 
-    public static bool is_member(KeyValuePair<string,int > nameroom) {
+    public static bool is_member(string name,int room) {
         // an nut play
         return true;
     }
