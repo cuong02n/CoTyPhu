@@ -24,22 +24,23 @@ C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-wi
 C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\ref\CoTyPhu.dll
 <<<<<<< HEAD
 =======
-C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.Properties.Resources.resources
-<<<<<<< HEAD
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.Properties.Resources.resources
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.view.mainForm.resources
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.view.playForm.resources
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.GenerateResource.cache
-=======
-C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\Guna.UI2.dll
-C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\System.Management.dll
-C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Management.dll
-C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.CopyComplete
 >>>>>>> a4e0c1503553f6fd63bde1ed349e6ed76eebc045
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\bin\Debug\net7.0-windows\Guna.UI2.dll
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\bin\Debug\net7.0-windows\System.Management.dll
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\bin\Debug\net7.0-windows\runtimes\win\lib\net6.0\System.Management.dll
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.CopyComplete
-C:\Users\PhamThuHang\source\repos\project1_Co_Ty_Phu\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.view.userForm.resources
 C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.view.userForm.resources
 >>>>>>> 77b79a6e0d0625f3077950b2be6c3cb7e9078ade
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.view.waitingForm.resources
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.AssemblyInfo.cs
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.dll
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\refint\CoTyPhu.dll
+C:\Users\Admin\Desktop\COZE\C#\CoTyPhu\obj\Debug\net7.0-windows\CoTyPhu.pdb
