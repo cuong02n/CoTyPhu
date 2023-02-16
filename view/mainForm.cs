@@ -10,8 +10,9 @@ using System.Windows.Forms;
 
 namespace CoTyPhu.view
 {
-    public partial class mainForm : Form
-    {
+    public partial class mainForm : Form {
+        public static userForm user;
+        public static playForm _playForm;
         public mainForm()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace CoTyPhu.view
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            userForm user = new userForm();
+            user = new userForm();
             user.Show();
         }
 

@@ -61,7 +61,7 @@ public class control_view {
     }
     
     public static KeyValuePair<string,int> get_name_room() {
-        return new KeyValuePair<string, int>("ok", 123);
+        return new KeyValuePair<string, int>(mainForm.user.tbUserName.Text,Int32.Parse(mainForm.user.tbRoomId.Text));
     }
 
     public static bool is_host(KeyValuePair<string ,int > name_room) {

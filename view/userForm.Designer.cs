@@ -98,10 +98,10 @@
 
         #endregion
 
-        private TextBox tbUserName;
+        public TextBox tbUserName;
         private Label labelName;
         private Button playButton;
         private Label labelRoomId;
-        private TextBox tbRoomId;
+        public TextBox tbRoomId;
     }
 }

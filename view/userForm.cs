@@ -30,8 +30,8 @@ namespace CoTyPhu.view
         private void playButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            playForm play = new playForm();
-            play.Show();
+            mainForm._playForm = new playForm();
+            mainForm._playForm.Show();
         }
     }
 }
