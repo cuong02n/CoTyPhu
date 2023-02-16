@@ -1,5 +1,6 @@
 using System.Net;
 using System.Net.Sockets;
+using System.Numerics;
 using System.Text;
 using CoTyPhu.model;
 using CoTyPhu.view;
@@ -9,7 +10,7 @@ namespace CoTyPhu.control.client;
 public class control_client {
     public static lobby l = new lobby();
 
-    public static IPEndPoint[] ipEndpoints = new IPEndPoint[10];
+    public static List<IPEndPoint> IPEndpoints = new ();
     public static int room;
     public static UdpClient client;
     public static IPEndPoint ipEndPoint;
@@ -24,11 +25,14 @@ public class control_client {
     }
 
     public static void send_data<T>(T data) {
-        
+        for (int i =0 ; i < IPEndpoints.Count; i++) {
+            client.Client.SendTo(Encoding.ASCII.GetBytes(data.ToString()), IPEndpoints[i]);
+        }
     }
 
     public static T receive_data<T>() {
         // Pair
+        
         return (T)Convert.ChangeType(true,typeof(T));
     }
     

@@ -4,7 +4,7 @@ using CoTyPhu.control.client;
 namespace CoTyPhu;
 using CoTyPhu.view;
 
-public class Pair<T1,T2> {
+public struct Pair<T1,T2> {
     public T1 Key;
     public T2 Value;
 
