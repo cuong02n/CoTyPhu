@@ -104,7 +104,7 @@ public class control_client {
     }
 
     public bool check_room(int ID_room, string name) {
-        
+        return true;
     }
 
 
