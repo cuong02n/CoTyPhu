@@ -3,7 +3,6 @@ using System.Runtime.InteropServices;
 using CoTyPhu.model;
 [StructLayout(LayoutKind.Sequential)]
 public class game {
-    
     public static string[] Event = new string[10];
     public static int STT_PLAYER;
     public static int number_of_players;

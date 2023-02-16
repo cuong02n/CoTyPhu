@@ -7,20 +7,9 @@ namespace CoTyPhu.client;
     
 
 public class control_client {
-
-    public void control_client() {
-        IPAddress  ipaddr= IPAddress.Any;
-        IPEndPoint endpoint = new IPEndPoint(,9999)
-    }
     
     
-    public static int[] map = {
-        -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1,
-        -1, -1, -1, -1
-    };
-
     // TODO
-    
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5
     // frontend.tungxx()
@@ -75,13 +64,13 @@ public class control_client {
 
     public static void handle_map() {
         for (int i = 0; i < 32; i++) {
-            if (map[i] < 0) {
+            if (game.Plots[i].owner < 0) {
                 break;
             }
 
             int same = 0;
             for (int j = i + 1; j < 32; j++) {
-                if (map[i] == map[j]) {
+                if (game.Plots[i].owner == game.Plots[j].owner) {
                     same++;
                 } else {
                     // het lien tuc roi
@@ -111,6 +100,11 @@ public class control_client {
         // TODO
     }
 
+    public bool check_room(int ID_room, string name) {
+        
+    }
+
+
     public static void handle_move() {
         // 4 consecutive move : imprison
         // goto auction plot: auction or not
@@ -121,5 +115,9 @@ public class control_client {
         // my plot
         // random event
         // teleport
+        
+        // TODO
     }
+    
+    
 }
