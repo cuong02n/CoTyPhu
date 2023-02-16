@@ -1,4 +1,5 @@
 using System.Net;
+using System.Net.Sockets;
 using CoTyPhu.model;
 using CoTyPhu.view;
 
@@ -7,8 +8,10 @@ namespace CoTyPhu.client;
     
 
 public class control_client {
-    
-    
+
+    public static void init_UDP_client() {
+        UdpClient client = new UdpClient(9999);
+    }
     // TODO
     // nhan dc du lieu tu ng choi 1
     // tung xx dc 5,5
