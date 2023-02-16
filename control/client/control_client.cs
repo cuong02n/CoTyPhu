@@ -7,11 +7,14 @@ using CoTyPhu.view;
 namespace CoTyPhu.client;
 
 public class control_client {
+    public static UdpClient client;
+    public static IPEndPoint ipEndPoint;
+    public static Socket sk;
     public static void init_UDP_client() {
-        UdpClient client = new UdpClient(9999);
-        IPEndPoint ipEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
-        Socket sk = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.udp);
-        byte[] sender = Encoding.ASCII.GetBytes(control_view.get_name_room());
+        client = new UdpClient(9999);
+        ipEndPoint = new IPEndPoint(IPAddress.Parse("127.0.0.1"), 9999);
+        sk = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
+        byte[] sender = Encoding.ASCII.GetBytes(control_view.get_name_room().ToString());
         sk.SendTo(sender, ipEndPoint);
     }
 
