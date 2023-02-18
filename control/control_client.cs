@@ -9,7 +9,6 @@ using CoTyPhu.view;
 namespace CoTyPhu.control.client;
 
 public class control_client {
-    public lobby l = new lobby();
     public int room;
     public IPEndPoint IpServer;
     public Socket sk;
@@ -21,13 +20,18 @@ public class control_client {
         IpServer = new IPEndPoint(IPAddress.Loopback, 9999);
         try {
             sk.Connect(IpServer);
+            Thread re = new Thread(receive);
+            re.IsBackground = true;
+            re.Start();
+                
         } catch (Exception) {
             control_view.error("Cannot connect to Host");
             throw;
         }
     }
+    
 
-    public void SEND_ACTION(string action) {
+    public void send(object action) {
         try {
             sk.Send(Serialize(action));
         } catch (Exception e) {
@@ -37,7 +41,22 @@ public class control_client {
     }
 
     public void receive() {
-        
+        try {
+            while (true) {
+                byte[] type = new byte[50];
+                sk.Receive(type);
+                byte[] data = new byte[1024 * 5];
+                sk.Receive(data);
+                action.process(type.ToString(),Deserialize(data));
+            }
+        } catch (Exception e) {
+            Console.WriteLine(e);
+            throw;
+        }
+    }
+
+    public control_client() {
+        Connect_to_server();
     }
 
     

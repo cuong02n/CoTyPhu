@@ -1,7 +1,9 @@
+using CoTyPhu.model;
+
 namespace CoTyPhu.view; 
 
 public class control_view {
-    public static void rollTheDice(int dice1,int dice2)
+    public static void roll_Dice(int STT_player,int dice1,int dice2)
     {
 
     }
@@ -75,6 +77,14 @@ public class control_view {
     }
 
     public static void error(string a) {
+        
+    }
+
+    public static void display_lobby(lobby l) {
+        
+    }
+
+    public static void display_game(game g) {
         
     }
 }

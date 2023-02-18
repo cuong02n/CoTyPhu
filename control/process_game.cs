@@ -1,14 +1,14 @@
 using CoTyPhu.model;
 using CoTyPhu.view;
 
-namespace CoTyPhu.control; 
+namespace CoTyPhu.control;
 
 public class process_game {
-    public static bool check_conflict_name(string name) {
+    public static bool check_conflict_room(int room) {
         return true;
     }
 
-    public static bool check_conflict_room(int room) {
+    public static bool check_conflict_name(string name) {
         return true;
     }
 
@@ -23,7 +23,7 @@ public class process_game {
 
     public static void imprison(int STT) {
         // TODO
-        control_view.imprison(STT, game.Players[STT].position);
+        control_view.imprison(STT, main.g.Players[STT].position);
     }
 
     public static ticket random_ticket() {
@@ -38,9 +38,9 @@ public class process_game {
             return player_turn;
         }
 
-        for (int i = player_turn; i < game.number_of_players + player_turn; i++) {
-            if (game.alive[i]) {
-                return i % game.number_of_players;
+        for (int i = player_turn; i < main.g.number_of_players + player_turn; i++) {
+            if (main.g.alive[i]) {
+                return i % main.g.number_of_players;
             }
         }
 
@@ -48,7 +48,7 @@ public class process_game {
     }
 
     public static void startgame() {
-        control_view.start(game.number_of_players);
+        control_view.start(main.g.number_of_players);
     }
 
     public static void endgame() {
@@ -64,24 +64,24 @@ public class process_game {
 
     public static void handle_map() {
         for (int i = 0; i < 32; i++) {
-            if (game.Plots[i].owner < 0) {
+            if (main.g.Plots[i].owner < 0) {
                 break;
             }
 
             int same = 0;
             for (int j = i + 1; j < 32; j++) {
-                if (game.Plots[i].owner == game.Plots[j].owner) {
+                if (main.g.Plots[i].owner == main.g.Plots[j].owner) {
                     same++;
                 } else {
                     // het lien tuc roi
                     if (same >= 3) {
                         for (int k = i; k < j; k++) {
-                            game.Plots[k].multiple = 0.7f;
+                            main.g.Plots[k].multiple = 0.7f;
                             control_view.change_multiple(i, 0.7f);
                         }
                     } else {
                         for (int k = i; k < j; k++) {
-                            game.Plots[k].multiple = 1;
+                            main.g.Plots[k].multiple = 1;
                             control_view.change_multiple(i, 1);
                         }
                     }
