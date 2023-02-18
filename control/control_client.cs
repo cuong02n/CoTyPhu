@@ -10,11 +10,8 @@ namespace CoTyPhu.control.client;
 
 public class control_client {
     public lobby l = new lobby();
-
-    public List<Socket> connected = new();
     public int room;
     public IPEndPoint IpServer;
-    public IPEndPoint ip_to_send;
     public Socket sk;
 
     public void Connect_to_server() {
@@ -39,6 +36,11 @@ public class control_client {
         }
     }
 
+    public void receive() {
+        
+    }
+
+    
 
     public static object Deserialize(byte[] data) {
         BinaryFormatter formatter = new BinaryFormatter();

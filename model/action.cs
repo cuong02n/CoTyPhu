@@ -1,5 +1,5 @@
 namespace CoTyPhu.model; 
 
-public interface action {
-       
+public class action {
+    
 }

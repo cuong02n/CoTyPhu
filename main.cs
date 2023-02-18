@@ -1,4 +1,5 @@
 using System.Net;
+using CoTyPhu.control;
 using CoTyPhu.control.client;
 
 namespace CoTyPhu;
@@ -15,6 +16,6 @@ class Program {
         ApplicationConfiguration.Initialize();
         Application.Run(new mainForm());
 
-        
+        new control_server().SEND_ACTION("!2e");
     }
 }
