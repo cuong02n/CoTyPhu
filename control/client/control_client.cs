@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Numerics;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using CoTyPhu.model;
 using CoTyPhu.view;
@@ -8,59 +9,69 @@ using CoTyPhu.view;
 namespace CoTyPhu.control.client;
 
 public class control_client {
-    public static lobby l = new lobby();
+    public lobby l = new lobby();
 
-    public static List<IPEndPoint> IPEndpoints = new ();
-    public static int room;
-    public static UdpClient client;
-    public static IPEndPoint ipEndPoint;
-    public static IPEndPoint ip_to_send;
-    public static Socket sk;
+    public List<Socket> connected = new();
+    public int room;
+    public IPEndPoint IpServer;
+    public IPEndPoint ip_to_send;
+    public Socket sk;
 
-    public static void init_UDP() {
-        client = new UdpClient();
-        ipEndPoint = new IPEndPoint(IPAddress.Any, 9999);
-        client.Client.ReceiveTimeout = 2000;
-        client.Client.SendTimeout = 2000;
-    }
-
-    public static void send_data<T>(T data) {
-        for (int i =0 ; i < IPEndpoints.Count; i++) {
-            client.Client.SendTo(Encoding.ASCII.GetBytes(data.ToString()), IPEndpoints[i]);
+    public void Connect_to_server() {
+        sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        IpServer = new IPEndPoint(IPAddress.Loopback, 9999);
+        try {
+            sk.Connect(IpServer);
+        } catch (Exception) {
+            control_view.error("Cannot connect to Host");
+            throw;
         }
     }
 
-    public static T receive_data<T>() {
-        // Pair
-        
-        return (T)Convert.ChangeType(true,typeof(T));
+    public void SEND_ACTION(string action) {
+        try {
+            sk.Send(Serialize(action));
+        } catch (Exception e) {
+            Console.WriteLine(e);
+            throw;
+        }
     }
-    
+
+
+    public static object Deserialize(byte[] data) {
+        BinaryFormatter formatter = new BinaryFormatter();
+        MemoryStream stream = new MemoryStream(data);
+
+#pragma warning disable SYSLIB0011
+        return formatter.Deserialize(stream);
+#pragma warning restore SYSLIB0011
+    }
+
+    public static byte[] Serialize(object obj) {
+        BinaryFormatter formatter = new BinaryFormatter();
+        MemoryStream stream = new MemoryStream();
+#pragma warning disable SYSLIB0011
+        formatter.Serialize(stream, obj);
+#pragma warning restore SYSLIB0011
+
+        return stream.ToArray();
+    }
+
     public static bool check_conflict_name(string name) {
         return true;
     }
 
     public static bool check_conflict_room(int room) {
-        byte[] room_bytes = Encoding.ASCII.GetBytes(room.ToString());
-        client.Client.SendTo(room_bytes, new IPEndPoint(IPAddress.Loopback, 9999));
-
-        try {
-            client.Receive(ref ip_to_send);
-            return false;
-        } catch (Exception e) {
-            return true;
-        }
+        return true;
     }
-    
-    
 
 
     // TODO
-    public static Pair<int, int> random_dice() {
+    public static KeyValuePair<int, int> random_dice() {
         Random r = new Random();
         int x = r.Next(1, 6);
         int y = r.Next(1, 6);
-        return new Pair<int, int>(x, y);
+        return new KeyValuePair<int, int>(x, y);
     }
 
     public static void imprison(int STT) {

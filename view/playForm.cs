@@ -30,7 +30,7 @@ namespace CoTyPhu.view
 
         int count =0;
         private void timer1_auto(object sender, EventArgs e) {
-        Pair<int, int> dice = control_client.random_dice();
+        KeyValuePair<int, int> dice = control_client.random_dice();
         dice1.Text = Convert.ToString(dice.Key);
         dice2.Text = Convert.ToString(dice.Value);
         if(count >50) {

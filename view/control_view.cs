@@ -60,8 +60,8 @@ public class control_view {
         
     }
     
-    public static Pair<string,int> get_name_room() {
-        return new Pair<string, int>(mainForm.user.tbUserName.Text,Int32.Parse(mainForm.user.tbRoomId.Text));
+    public static KeyValuePair<string,int> get_name_room() {
+        return new KeyValuePair<string, int>(mainForm.user.tbUserName.Text,Int32.Parse(mainForm.user.tbRoomId.Text));
     }
 
     public static bool is_host(string name,int room) {
@@ -72,5 +72,9 @@ public class control_view {
     public static bool is_member(string name,int room) {
         // an nut play
         return true;
+    }
+
+    public static void error(string a) {
+        
     }
 }
