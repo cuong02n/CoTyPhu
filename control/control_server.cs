@@ -1,6 +1,7 @@
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using CoTyPhu.control.client;
 using CoTyPhu.model;
 
@@ -54,18 +55,37 @@ public class control_server {
     }
 
     //receive data from a client
-    public void send(byte[] data) {
+    public void send(object obj) {
         try {
             foreach (Socket client in SK_connected) {
-                client.Send(data);
+                client.Send(Serialize(obj));
             }
         } catch (Exception e) {
             Console.WriteLine(e);
             throw;
         }
     }
+    public static object Deserialize(byte[] data) {
+        BinaryFormatter formatter = new BinaryFormatter();
+        MemoryStream stream = new MemoryStream(data);
+
+#pragma warning disable SYSLIB0011
+        return formatter.Deserialize(stream);
+#pragma warning restore SYSLIB0011
+    }
+ 
+    public static byte[] Serialize(object obj) {
+        BinaryFormatter formatter = new BinaryFormatter();
+        MemoryStream stream = new MemoryStream();
+#pragma warning disable SYSLIB0011
+        formatter.Serialize(stream, obj);
+#pragma warning restore SYSLIB0011
+
+        return stream.ToArray();
+    }
 
     public control_server() {
         Accept_client();
+        main.is_server = true;
     }
 }

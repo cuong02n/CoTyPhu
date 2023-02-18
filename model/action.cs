@@ -1,16 +1,30 @@
 using System.Runtime.CompilerServices;
+using CoTyPhu.control;
 using CoTyPhu.view;
 
 namespace CoTyPhu.model;
 
 public class action {
-    public static lobby l;
 
+
+    // process data 
+    // with the client is received
+    // with the server is sent
     public static void process(string type, object obj) {
         switch (type) {
-            
+            case "room":
+                int room = (int)obj;
+                if (main.is_server) {
+                    main.ControlServer.send("room");
+                    main.ControlServer.send(main.l.room);
+                } else {
+                    main.l.room = room;
+                    
+                }
+                break;
             case "lobby":
-                get_lobby((lobby)obj);
+                main.l = (lobby)obj;
+                control_view.display_lobby(main.l);
                 break;
             case "start":
                 control_view.start((int)obj);
@@ -24,14 +38,14 @@ public class action {
                 control_view.roll_Dice(v.Key,v.Value.Key,v.Value.Value);
                 break;
             case "imprison":
+                
                 break;
             case "transfer":
                 break;
+            
+            default:
+                throw new Exception("Error");
         }
     }
-
-    public static void get_lobby(lobby l) {
-        action.l = l;
-        control_view.display_lobby(l);
-    }
+    
 }

@@ -93,15 +93,10 @@ public class process_game {
         }
         // DONE
     }
+    
 
-    public static void transfer(int money, int player_from, int player_to) {
-        if (player_from >= 0) {
-        }
-        // TODO
-    }
-
-    public bool check_room(int ID_room, string name) {
-        return true;
+    public bool check(int room, string name) {
+        return false;
     }
 
 

@@ -58,24 +58,10 @@ public class control_view {
         
     }
 
-    public static void go_to_room(int room, int number_of_player) {
-        
-    }
-    
     public static KeyValuePair<string,int> get_name_room() {
         return new KeyValuePair<string, int>(mainForm.user.tbUserName.Text,Int32.Parse(mainForm.user.tbRoomId.Text));
     }
-
-    public static bool is_host(string name,int room) {
-        // control_client.init_UDP_host();
-        return true;
-    }
     
-    public static bool is_member(string name,int room) {
-        // an nut play
-        return true;
-    }
-
     public static void error(string a) {
         
     }
