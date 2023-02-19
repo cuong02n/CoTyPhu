@@ -8,9 +8,6 @@ namespace CoTyPhu;
 using CoTyPhu.view;
 
 class main {
-    public static TextBox ERR = null;
-    public static userForm user;
-
     public static playForm _playForm;
     public static waitingForm waitingForm;
     public static string name;
