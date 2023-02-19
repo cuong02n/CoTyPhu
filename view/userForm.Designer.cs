@@ -40,7 +40,7 @@
             // 
             this.tbUserName.Location = new System.Drawing.Point(200, 107);
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(151, 23);
+            this.tbUserName.Size = new System.Drawing.Size(261, 23);
             this.tbUserName.TabIndex = 0;
             // 
             // labelName
@@ -76,7 +76,7 @@
             // 
             this.tbRoomId.Location = new System.Drawing.Point(200, 171);
             this.tbRoomId.Name = "tbRoomId";
-            this.tbRoomId.Size = new System.Drawing.Size(151, 23);
+            this.tbRoomId.Size = new System.Drawing.Size(261, 23);
             this.tbRoomId.TabIndex = 3;
             this.tbRoomId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 

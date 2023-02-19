@@ -57,7 +57,7 @@
             this.nameView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.nameView.Location = new System.Drawing.Point(231, 98);
             this.nameView.Name = "nameView";
-            this.nameView.Size = new System.Drawing.Size(79, 31);
+            this.nameView.Size = new System.Drawing.Size(173, 31);
             this.nameView.TabIndex = 3;
             // 
             // idView
@@ -65,7 +65,7 @@
             this.idView.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.idView.Location = new System.Drawing.Point(231, 44);
             this.idView.Name = "idView";
-            this.idView.Size = new System.Drawing.Size(79, 29);
+            this.idView.Size = new System.Drawing.Size(173, 29);
             this.idView.TabIndex = 4;
             // 
             // waitingForm

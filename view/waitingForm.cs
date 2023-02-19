@@ -12,11 +12,15 @@ namespace CoTyPhu.view
 {
     public partial class waitingForm : Form
     {
+        public static waitingForm instance;
+        public Label id;
+        public Label name;
         public waitingForm()
         {
             InitializeComponent();
-            nameView.Text = mainForm.user.tbUserName + "";
-            idView.Text = mainForm.user.tbRoomId + "";
+           instance = this;
+            id = idView;
+            name = nameView;
         }
     }
 }

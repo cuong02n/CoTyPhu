@@ -12,9 +12,15 @@ namespace CoTyPhu.view
 {
     public partial class userForm : Form
     {
+        public static userForm instance;
+        public TextBox tbName;
+        public TextBox tbId;
         public userForm()
         {
             InitializeComponent();
+            instance = this;
+            tbName = tbUserName;
+            tbId = tbRoomId;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -26,7 +32,6 @@ namespace CoTyPhu.view
         {
 
         }
-
         private void playButton_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -36,9 +41,12 @@ namespace CoTyPhu.view
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            mainForm.waitingForm = new waitingForm();
-            mainForm.waitingForm.Show();
+            //this.Hide();
+            
+            waitingForm waiting = new waitingForm();
+            waiting.Show();
+            waitingForm.instance.name.Text = tbUserName.Text;
+            waitingForm.instance.id.Text = tbRoomId.Text;
         }
     }
 }
