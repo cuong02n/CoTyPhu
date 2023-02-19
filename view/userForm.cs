@@ -34,23 +34,21 @@ namespace CoTyPhu.view
         }
         private void playButton_Click(object sender, EventArgs e)
         {
+            main.name = tbName.Text;
+            main.room = Int32.Parse(tbRoomId.Text);
+           
             this.Hide();
             mainForm._playForm = new playForm();
             mainForm._playForm.Show();
-            playForm.instance.name.Text = tbName.Text;
-            playForm.instance.id.Text = tbId.Text;
         }
 
         private void createButton_Click(object sender, EventArgs e)
         {
+            main.name = tbName.Text;
+            main.room = Int32.Parse(tbRoomId.Text);
             this.Hide();
-            
-            waitingForm waiting = new waitingForm();
-            waiting.Show();
-            waitingForm.instance.name.Text = tbUserName.Text;
-            waitingForm.instance.id.Text = tbRoomId.Text;
-            playForm.instance.name.Text = tbName.Text;
-            playForm.instance.id.Text = tbId.Text;
+            mainForm.waiting = new waitingForm();
+            mainForm.waiting.Show();
         }
     }
 }
