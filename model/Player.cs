@@ -3,7 +3,7 @@ using System.Numerics;
 
 namespace CoTyPhu.model; 
 
-public class player {
+public class Player {
     public string name;
     public IPAddress IP;
     public int STT;
@@ -14,7 +14,7 @@ public class player {
     public Vector<int> plots = new();// pos
     public Vector<ticket> tickets = new();
 
-    public player(string name, IPAddress IP, int STT, long money,Color color) {
+    public Player(string name, IPAddress IP, int STT, long money,Color color) {
         this.name = name;
         this.IP = IP;
         this.STT = STT;

@@ -11,7 +11,7 @@ public class game {
     public  int number_of_alives;
     public  int size_plot;
     public  bool[] alive = new bool[6];
-    public  player[] Players = new player[6];
+    public List<Player> players = new();
     public  plot[] Plots = new plot[32];
     public  int turn;
 

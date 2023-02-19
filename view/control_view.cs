@@ -67,7 +67,7 @@ public class control_view {
     }
 
     public static void display_lobby(lobby l) {
-        
+        // goto lobby
     }
 
     public static void display_game(game g) {

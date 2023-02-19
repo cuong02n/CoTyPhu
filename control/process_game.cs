@@ -4,14 +4,6 @@ using CoTyPhu.view;
 namespace CoTyPhu.control;
 
 public class process_game {
-    public static bool check_conflict_room(int room) {
-        return true;
-    }
-
-    public static bool check_conflict_name(string name) {
-        return true;
-    }
-
 
     // TODO
     public static KeyValuePair<int, int> random_dice() {
@@ -23,7 +15,7 @@ public class process_game {
 
     public static void imprison(int STT) {
         // TODO
-        control_view.imprison(STT, main.g.Players[STT].position);
+        control_view.imprison(STT, main.g.players[STT].position);
     }
 
     public static ticket random_ticket() {
@@ -95,27 +87,27 @@ public class process_game {
     }
 
 
-    public bool check(int room) {
-        // if client
-        try {
-            main.thresh_receive.Suspend();
-            main.ControlClient.send(room);
-            Thread.Sleep(100); // 100 ping maximum
-            main.thresh_receive.Resume();
-        } catch (Exception e) {
-            Console.WriteLine(e);
-        }
-
-        if (main.room_receive_from_server == main.l.room) {
-            // room ok 
-            // request lobby
-            
-            return true;
-        }
-
-        return false;
-    }
-
+    // public bool check(int room) {
+    //     // if client
+    //     try {
+    //         main.thresh_receive.Suspend();
+    //         main.ControlClient.send(room);
+    //         Thread.Sleep(100); // 100 ping maximum
+    //         main.thresh_receive.Resume();
+    //     } catch (Exception e) {
+    //         Console.WriteLine(e);
+    //     }
+    //
+    //     if (main.room_receive_from_server == main.l.room) {
+    //         // room ok 
+    //         // request lobby
+    //         
+    //         return true;
+    //     }
+    //
+    //     return false;
+    // }
+    
 
     public static void handle_move() {
         // 4 consecutive move : imprison

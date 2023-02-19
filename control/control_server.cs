@@ -36,6 +36,7 @@ public class control_server {
     }
 
     public void receive(object obj) {
+        // receive(Socket client)
         Socket client = obj as Socket;
         try {
             while (true) {
@@ -43,7 +44,7 @@ public class control_server {
                 client.Receive(type);
                 byte[] data = new byte[1024 * 5];
                 client.Receive(data);
-                action.process(type.ToString(),control_client.Deserialize(data));
+                action_server.process(client,type.ToString(),control_client.Deserialize(data));
                 // TODO
             }
         } catch (Exception e) {
@@ -62,6 +63,16 @@ public class control_server {
             Console.WriteLine(e);
             throw;
         }
+    }
+
+    public void single_send(Socket sk, object obj) {
+        try {
+            sk.Send(Serialize(obj));
+        } catch (Exception e) {
+            Console.WriteLine(e);
+            throw;
+        }
+        
     }
     public static object Deserialize(byte[] data) {
         BinaryFormatter formatter = new BinaryFormatter();
@@ -83,7 +94,9 @@ public class control_server {
     }
 
     public control_server() {
-        Accept_client();
         main.is_server = true;
+        main.my_STT = 0;
+        Accept_client();
+        
     }
 }

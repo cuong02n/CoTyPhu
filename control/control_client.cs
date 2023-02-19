@@ -23,7 +23,6 @@ public class control_client {
             main.thresh_receive = new Thread(receive);
             main.thresh_receive.IsBackground = true;
             main.thresh_receive.Start();
-                
         } catch (Exception) {
             control_view.error("Cannot connect to Host");
             throw;
