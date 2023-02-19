@@ -5,6 +5,6 @@
 	<s:String x:Key="/Default/CodeInspection/PencilsConfiguration/Storage/@EntryValue">ThisComputer</s:String>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CoTyPhu_002Fview_002FmainForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CoTyPhu_002Fview_002FplayForm/@EntryIndexedValue">True</s:Boolean>
-	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CoTyPhu_002Fview_002FuserForm/@EntryIndexedValue">False</s:Boolean>
+	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CoTyPhu_002Fview_002FuserForm/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=CoTyPhu_002Fview_002FwaitingForm/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/Initialized/@EntryValue">True</s:Boolean></wpf:ResourceDictionary>
