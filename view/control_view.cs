@@ -1,7 +1,9 @@
+using CoTyPhu.model;
+
 namespace CoTyPhu.view; 
 
 public class control_view {
-    public static void rollTheDice(int dice1,int dice2)
+    public static void roll_Dice(int STT_player,int dice1,int dice2)
     {
 
     }
@@ -56,21 +58,19 @@ public class control_view {
         
     }
 
-    public static void go_to_room(int room, int number_of_player) {
-        
-    }
-    
     public static KeyValuePair<string,int> get_name_room() {
         return new KeyValuePair<string, int>(mainForm.user.tbUserName.Text,Int32.Parse(mainForm.user.tbRoomId.Text));
     }
-
-    public static bool is_host(string name,int room) {
-        // an nut create
-        return true;
+    
+    public static void error(string a) {
+        
     }
 
-    public static bool is_member(string name,int room) {
-        // an nut play
-        return true;
+    public static void display_lobby(lobby l) {
+        
+    }
+
+    public static void display_game(game g) {
+        
     }
 }

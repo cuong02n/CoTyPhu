@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CoTyPhu.client;
+using CoTyPhu.control;
+using CoTyPhu.control.client;
 
 
 namespace CoTyPhu.view
@@ -30,7 +31,7 @@ namespace CoTyPhu.view
 
         int count =0;
         private void timer1_auto(object sender, EventArgs e) {
-        KeyValuePair<int, int> dice = control_client.random_dice();
+        KeyValuePair<int, int> dice = process_game.random_dice();
         dice1.Text = Convert.ToString(dice.Key);
         dice2.Text = Convert.ToString(dice.Value);
         if(count >50) {

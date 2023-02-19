@@ -1,28 +1,50 @@
-namespace CoTyPhu.model; 
+using System.Runtime.CompilerServices;
+using CoTyPhu.control;
+using CoTyPhu.view;
+
+namespace CoTyPhu.model;
 
 public class action {
-    public static void message(string t) {
-        switch (t) {
-            case "check_room":
-                // if no response , mean exist
-                // if response, not exist
-                // TODO
+
+
+    // process data 
+    // with the client is received
+    // with the server is sent
+    public static void process(string type, object obj) {
+        switch (type) {
+            case "room":
+                int room = (int)obj;
+                if (main.is_server) {
+                    main.ControlServer.send("room");
+                    main.ControlServer.send(main.l.room);
+                } else {
+                    main.l.room = room;
+                }
                 break;
-            case "check_name":
-                // in the room, send the name
-                // if no response , mean exist
-                // if response, not exist
-                // TODO
+            case "lobby":
+                main.l = (lobby)obj;
+                control_view.display_lobby(main.l);
                 break;
             case "start":
-                // if player > 2- > start
-                // TODO
+                control_view.start((int)obj);
                 break;
-            case "roll_dice":
-                //player rool the dice
-                // TODO
+            case "game":
+                main.g = (game)obj;
+                control_view.display_game(main.g);
+                break;
+            case "roll dice":
+                KeyValuePair<int, KeyValuePair<int, int>> v = (KeyValuePair<int, KeyValuePair<int, int>>)obj;
+                control_view.roll_Dice(v.Key,v.Value.Key,v.Value.Value);
+                break;
+            case "imprison":
+                
+                break;
+            case "transfer":
                 break;
             
+            default:
+                throw new Exception("Error");
         }
     }
+    
 }

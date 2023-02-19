@@ -8,18 +8,20 @@ public class player {
     public IPAddress IP;
     public int STT;
     public long  money;
-    public string color;
+    public Color color;
     public int position;
     public int consecutive_dice;
     public Vector<int> plots = new();// pos
     public Vector<ticket> tickets = new();
 
-    public player(string name, IPAddress IP, int STT, long money, int position) {
+    public player(string name, IPAddress IP, int STT, long money,Color color) {
         this.name = name;
         this.IP = IP;
         this.STT = STT;
         this.money = money;
-        this.position = position;
+        this.color = color;
+        consecutive_dice = 0;
+        position = 0;
     }
 }   
 

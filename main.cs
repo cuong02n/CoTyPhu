@@ -1,16 +1,21 @@
-using System.Diagnostics;
 using System.Net;
-using System.Net.Sockets;
-using System.Runtime.InteropServices;
-using System.Text;
+using CoTyPhu.control;
+using CoTyPhu.control.client;
+using CoTyPhu.model;
 
 namespace CoTyPhu;
 using CoTyPhu.view;
 
-class Program {
-    public static IPAddress ducmiip = IPAddress.Parse("26.89.162.172");
-    public static IPAddress myip = IPAddress.Parse("26.52.142.16");
-    public const int port = 2905;
+class main {
+    public static int room_receive_from_server;
+    public static lobby l;
+    public static game g;
+    public static bool is_server = false;
+
+    public static control_server ControlServer;
+    public static control_client ControlClient;
+
+    public static Thread thresh_receive;
     [STAThread]
     static void Main() {
 
