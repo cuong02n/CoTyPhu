@@ -35,6 +35,7 @@
             this.playButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.lbNumberPlayer = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -100,11 +101,22 @@
             this.lbNumberPlayer.TabIndex = 7;
             this.lbNumberPlayer.Text = "1";
             // 
+            // backButton
+            // 
+            this.backButton.Location = new System.Drawing.Point(211, 388);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.TabIndex = 8;
+            this.backButton.Text = "Back";
+            this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
             // waitingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.backButton);
             this.Controls.Add(this.lbNumberPlayer);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.playButton);
@@ -128,5 +140,6 @@
         private Button playButton;
         private Label label3;
         private Label lbNumberPlayer;
+        private Button backButton;
     }
 }

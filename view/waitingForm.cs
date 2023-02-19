@@ -21,6 +21,14 @@ namespace CoTyPhu.view
            instance = this;
             id = idView;
             name = nameView;
+            if (Int32.Parse(lbNumberPlayer.Text) < 2)
+            {
+                playButton.Enabled = false;
+            }
+            else if(Int32.Parse(lbNumberPlayer.Text) <= 4)
+            {
+                playButton.Enabled = true;
+            }
         }
 
         private void playButton_Click(object sender, EventArgs e)
@@ -28,6 +36,13 @@ namespace CoTyPhu.view
             this.Hide();
             playForm play = new playForm();
             play.Show();
+        }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainForm main = new mainForm();
+            main.Show();
         }
     }
 }

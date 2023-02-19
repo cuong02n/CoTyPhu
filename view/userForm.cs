@@ -43,12 +43,14 @@ namespace CoTyPhu.view
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            //this.Hide();
+            this.Hide();
             
             waitingForm waiting = new waitingForm();
             waiting.Show();
             waitingForm.instance.name.Text = tbUserName.Text;
             waitingForm.instance.id.Text = tbRoomId.Text;
+            playForm.instance.name.Text = tbName.Text;
+            playForm.instance.id.Text = tbId.Text;
         }
     }
 }

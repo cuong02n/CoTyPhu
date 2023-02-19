@@ -39,7 +39,7 @@ namespace CoTyPhu.view
         KeyValuePair<int, int> dice = process_game.random_dice();
         dice1.Text = Convert.ToString(dice.Key);
         dice2.Text = Convert.ToString(dice.Value);
-        if(count >50) {
+        if(count >30) {
             int move = dice.Key + dice.Value;
             labelMove.Text= move +"";
             character.Location = new Point(595, 539);
