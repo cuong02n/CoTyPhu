@@ -4,14 +4,6 @@ using CoTyPhu.view;
 namespace CoTyPhu.control;
 
 public class process_game {
-    public static bool check_conflict_room(int room) {
-        return true;
-    }
-
-    public static bool check_conflict_name(string name) {
-        return true;
-    }
-
 
     // TODO
     public static KeyValuePair<int, int> random_dice() {
@@ -115,10 +107,7 @@ public class process_game {
     //
     //     return false;
     // }
-
-    public void goto_lobby(Player player, lobby l) {
-        
-    }
+    
 
     public static void handle_move() {
         // 4 consecutive move : imprison
