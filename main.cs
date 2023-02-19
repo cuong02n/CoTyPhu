@@ -12,6 +12,8 @@ class main {
     public static game g;
     public static bool is_server = false;
 
+    public static int my_STT=0;
+
     public static control_server ControlServer;
     public static control_client ControlClient;
 
