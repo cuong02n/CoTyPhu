@@ -37,6 +37,8 @@ namespace CoTyPhu.view
             this.Hide();
             mainForm._playForm = new playForm();
             mainForm._playForm.Show();
+            playForm.instance.name.Text = tbName.Text;
+            playForm.instance.id.Text = tbId.Text;
         }
 
         private void createButton_Click(object sender, EventArgs e)

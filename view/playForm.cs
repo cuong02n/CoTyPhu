@@ -15,10 +15,15 @@ namespace CoTyPhu.view
 {
     public partial class playForm : Form
     {
+        public static playForm instance;
+        public Label id;
+        public Label name;
         public playForm()
         {
             InitializeComponent();
-           
+            instance = this;
+            name = lbNameP1;
+            id = lbRoomId;
         }
         Random rd = new Random();
         private void button1_Click(object sender, EventArgs e)

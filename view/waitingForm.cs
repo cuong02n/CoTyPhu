@@ -22,5 +22,12 @@ namespace CoTyPhu.view
             id = idView;
             name = nameView;
         }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            playForm play = new playForm();
+            play.Show();
+        }
     }
 }

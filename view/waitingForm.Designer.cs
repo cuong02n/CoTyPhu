@@ -32,6 +32,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.nameView = new System.Windows.Forms.Label();
             this.idView = new System.Windows.Forms.Label();
+            this.playButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbNumberPlayer = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -68,11 +71,43 @@
             this.idView.Size = new System.Drawing.Size(173, 29);
             this.idView.TabIndex = 4;
             // 
+            // playButton
+            // 
+            this.playButton.Location = new System.Drawing.Point(329, 388);
+            this.playButton.Name = "playButton";
+            this.playButton.Size = new System.Drawing.Size(75, 23);
+            this.playButton.TabIndex = 5;
+            this.playButton.Text = "Play";
+            this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(73, 225);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "number of player";
+            // 
+            // lbNumberPlayer
+            // 
+            this.lbNumberPlayer.AutoSize = true;
+            this.lbNumberPlayer.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbNumberPlayer.Location = new System.Drawing.Point(202, 213);
+            this.lbNumberPlayer.Name = "lbNumberPlayer";
+            this.lbNumberPlayer.Size = new System.Drawing.Size(25, 30);
+            this.lbNumberPlayer.TabIndex = 7;
+            this.lbNumberPlayer.Text = "1";
+            // 
             // waitingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbNumberPlayer);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.playButton);
             this.Controls.Add(this.idView);
             this.Controls.Add(this.nameView);
             this.Controls.Add(this.label2);
@@ -90,5 +125,8 @@
         private Label label2;
         private Label nameView;
         private Label idView;
+        private Button playButton;
+        private Label label3;
+        private Label lbNumberPlayer;
     }
 }
