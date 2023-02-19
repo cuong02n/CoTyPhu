@@ -7,8 +7,16 @@ namespace CoTyPhu;
 using CoTyPhu.view;
 
 class main {
+<<<<<<< HEAD
     public static TextBox ERR =null;
     
+=======
+    public static userForm user;
+    public static playForm _playForm;
+    public static waitingForm waitingForm;
+    public static string name;
+    public static int room;
+>>>>>>> 8a2c1094c2061fcd29b553e68346e4b0eafcebad
     public static int room_receive_from_server;
     public static lobby l;
     public static game g;

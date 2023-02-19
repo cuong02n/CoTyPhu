@@ -10,17 +10,19 @@ using System.Windows.Forms;
 
 namespace CoTyPhu.view
 {
+
     public partial class waitingForm : Form
     {
-        public static waitingForm instance;
-        public Label id;
-        public Label name;
+        public void hide() { }
+        public void create(int x,string name)
+        {
+
+        }
         public waitingForm()
         {
             InitializeComponent();
-           instance = this;
-            id = idView;
-            name = nameView;
+            nameView.Text = main.name ;
+            idView.Text = main.room.ToString() ;
             if (Int32.Parse(lbNumberPlayer.Text) < 2)
             {
                 playButton.Enabled = false;
