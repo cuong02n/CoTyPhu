@@ -96,6 +96,10 @@ public class control_server {
     public control_server() {
         main.is_server = true;
         main.my_STT = 0;
+
+        main.l = new lobby();
+        // Player host = new Player();
+        
         Accept_client();
         
     }
