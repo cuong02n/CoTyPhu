@@ -20,9 +20,9 @@ public class control_client {
         IpServer = new IPEndPoint(IPAddress.Loopback, 9999);
         try {
             sk.Connect(IpServer);
-            Thread re = new Thread(receive);
-            re.IsBackground = true;
-            re.Start();
+            main.thresh_receive = new Thread(receive);
+            main.thresh_receive.IsBackground = true;
+            main.thresh_receive.Start();
                 
         } catch (Exception) {
             control_view.error("Cannot connect to Host");

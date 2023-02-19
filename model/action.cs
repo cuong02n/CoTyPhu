@@ -19,7 +19,6 @@ public class action {
                     main.ControlServer.send(main.l.room);
                 } else {
                     main.l.room = room;
-                    
                 }
                 break;
             case "lobby":

@@ -93,9 +93,26 @@ public class process_game {
         }
         // DONE
     }
-    
 
-    public bool check(int room, string name) {
+
+    public bool check(int room) {
+        // if client
+        try {
+            main.thresh_receive.Suspend();
+            main.ControlClient.send(room);
+            Thread.Sleep(100); // 100 ping maximum
+            main.thresh_receive.Resume();
+        } catch (Exception e) {
+            Console.WriteLine(e);
+        }
+
+        if (main.room_receive_from_server == main.l.room) {
+            // room ok 
+            // request lobby
+            
+            return true;
+        }
+
         return false;
     }
 

@@ -20,12 +20,11 @@ public class control_server {
                 try {
                     Server.Listen(10);
                     Socket s = Server.Accept();
-
                     SK_connected.Add(s);
 
-                    Thread r = new Thread(receive);
-                    r.IsBackground = true;
-                    r.Start(s);
+                    main.thresh_receive = new Thread(receive);
+                    main.thresh_receive.IsBackground = true;
+                    main.thresh_receive.Start(s);
                 } catch (Exception e) {
                     Console.WriteLine(e);
                     throw;
@@ -45,8 +44,7 @@ public class control_server {
                 byte[] data = new byte[1024 * 5];
                 client.Receive(data);
                 action.process(type.ToString(),control_client.Deserialize(data));
-                send(type);
-                send(data);
+                // TODO
             }
         } catch (Exception e) {
             Console.WriteLine(e);
