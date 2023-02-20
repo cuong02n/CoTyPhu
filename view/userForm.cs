@@ -35,17 +35,18 @@ namespace CoTyPhu.view
             main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
            
-            this.Hide();
+            control_view.goToRoom(main.room, main.name);
             mainForm.showWaitingForm(main.room, main.name);
-            control_view.goToRoom(Int32.Parse(tbRoomId.Text), tbUserName.Text);
+            this.Hide();
         }
 
         private void createButton_Click(object sender, EventArgs e)
         {
             main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
-            this.Hide();
+            control_view.goToWaitPlayer(main.room, main.name);
             mainForm.showWaitingForm(main.room, main.name);
+            this.Hide();
         }
 
         private void tbUserName_TextChanged(object sender, EventArgs e)

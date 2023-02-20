@@ -73,6 +73,11 @@ public class control_view {
     public static void display_game(game g) {
         
     }
+    public static void goToWaitPlayer(int roomId,string name)
+    {
+        // vao phong cho`
+
+    }
     public static void goToRoom(int roomId, string name) {
         main.ControlClient = new control_client();
         main.ControlClient.send("request_room");
