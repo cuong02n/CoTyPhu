@@ -17,7 +17,8 @@ namespace CoTyPhu.view
         public mainForm()
         {
             InitializeComponent();
-
+            
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
