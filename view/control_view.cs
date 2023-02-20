@@ -66,14 +66,14 @@ public class control_view {
         
     }
 
-    public static void display_lobby(lobby l) {
-        // goto lobby
-        userForm.instance.Hide();
-        waitingForm waiting = new waitingForm();
-        waiting.Show();
+    public static void display_lobby(lobby l ) {
+        mainForm.waiting.displayLobby(l);
     }
 
     public static void display_game(game g) {
         
+    }
+    public void goToRoom(int x) {
+
     }
 }

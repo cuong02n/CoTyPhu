@@ -36,6 +36,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.lbNumberPlayer = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
+            this.lbPlayer1 = new System.Windows.Forms.Label();
+            this.lbPlayer2 = new System.Windows.Forms.Label();
+            this.lbPlayer3 = new System.Windows.Forms.Label();
+            this.lbPlayer4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -111,11 +115,47 @@
             this.backButton.UseVisualStyleBackColor = true;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
             // 
+            // lbPlayer1
+            // 
+            this.lbPlayer1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbPlayer1.Location = new System.Drawing.Point(268, 213);
+            this.lbPlayer1.Name = "lbPlayer1";
+            this.lbPlayer1.Size = new System.Drawing.Size(100, 23);
+            this.lbPlayer1.TabIndex = 9;
+            // 
+            // lbPlayer2
+            // 
+            this.lbPlayer2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbPlayer2.Location = new System.Drawing.Point(411, 213);
+            this.lbPlayer2.Name = "lbPlayer2";
+            this.lbPlayer2.Size = new System.Drawing.Size(100, 23);
+            this.lbPlayer2.TabIndex = 10;
+            // 
+            // lbPlayer3
+            // 
+            this.lbPlayer3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbPlayer3.Location = new System.Drawing.Point(549, 213);
+            this.lbPlayer3.Name = "lbPlayer3";
+            this.lbPlayer3.Size = new System.Drawing.Size(100, 23);
+            this.lbPlayer3.TabIndex = 11;
+            // 
+            // lbPlayer4
+            // 
+            this.lbPlayer4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lbPlayer4.Location = new System.Drawing.Point(679, 213);
+            this.lbPlayer4.Name = "lbPlayer4";
+            this.lbPlayer4.Size = new System.Drawing.Size(100, 23);
+            this.lbPlayer4.TabIndex = 12;
+            // 
             // waitingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lbPlayer4);
+            this.Controls.Add(this.lbPlayer3);
+            this.Controls.Add(this.lbPlayer2);
+            this.Controls.Add(this.lbPlayer1);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.lbNumberPlayer);
             this.Controls.Add(this.label3);
@@ -141,5 +181,9 @@
         private Label label3;
         private Label lbNumberPlayer;
         private Button backButton;
+        private Label lbPlayer1;
+        private Label lbPlayer2;
+        private Label lbPlayer3;
+        private Label lbPlayer4;
     }
 }

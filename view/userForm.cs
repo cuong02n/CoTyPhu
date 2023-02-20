@@ -12,15 +12,12 @@ namespace CoTyPhu.view
 {
     public partial class userForm : Form
     {
-        public static userForm instance;
-        public TextBox tbName;
-        public TextBox tbId;
+        int check = 0;
         public userForm()
         {
             InitializeComponent();
-            instance = this;
-            tbName = tbUserName;
-            tbId = tbRoomId;
+            playButton.Enabled = false;
+            createButton.Enabled = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,21 +31,50 @@ namespace CoTyPhu.view
         }
         private void playButton_Click(object sender, EventArgs e)
         {
-            main.name = tbName.Text;
+            main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
-           
+            check = check + 1;
             this.Hide();
             mainForm._playForm = new playForm();
             mainForm._playForm.Show();
+            control_view.goToRoom(check);
         }
 
         private void createButton_Click(object sender, EventArgs e)
         {
-            main.name = tbName.Text;
+            main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
             this.Hide();
             mainForm.waiting = new waitingForm();
             mainForm.waiting.Show();
+        }
+
+        private void tbUserName_TextChanged(object sender, EventArgs e)
+        {
+            if (tbUserName.Text == "")
+            {
+                playButton.Enabled = false;
+                createButton.Enabled = false;
+            }
+
+            else
+            {
+                playButton.Enabled = true;
+                createButton.Enabled = true;
+            }
+
+
+
+        }
+
+        private void tbUserName_DataContextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tbUserName_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
         }
     }
 }
