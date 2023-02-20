@@ -11,24 +11,27 @@ public class control_server {
     public List<Socket> SK_connected = new();
     private IPEndPoint IpEndPoint = new(IPAddress.Any, 9999);
     public int room;
-    
+    public Socket Server;
+
     public void Accept_client() {
-        Socket Server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+        Server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         Server.Bind(IpEndPoint);
         Thread accept = new Thread(() => {
-            while (true) {
-                try {
-                    Server.Listen(10);
-                    Socket s = Server.Accept();
+            try {
+                while (true) {
+                    Server.Listen(100);
+                    Socket s = Server.Accept(); // client
                     // SK_connected.Add(s);
 
                     Thread th = new Thread(receive);
                     th.IsBackground = true;
                     th.Start(s);
-                } catch (Exception e) {
-                    Console.WriteLine(e);
-                    throw;
                 }
+            } catch (Exception e) {
+                IpEndPoint = new IPEndPoint(IPAddress.Any, 9999);
+                Server = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                MessageBox.Show(e.ToString());
+                throw;
             }
         });
         accept.IsBackground = true;
@@ -44,7 +47,7 @@ public class control_server {
                 client.Receive(type);
                 byte[] data = new byte[1024 * 5];
                 client.Receive(data);
-                action_server.process(client,type.ToString(),control_client.Deserialize(data));
+                action_server.process(client, type.ToString(), control_client.Deserialize(data));
                 // TODO
             }
         } catch (Exception e) {
@@ -72,8 +75,8 @@ public class control_server {
             Console.WriteLine(e);
             throw;
         }
-        
     }
+
     public static object Deserialize(byte[] data) {
         BinaryFormatter formatter = new BinaryFormatter();
         MemoryStream stream = new MemoryStream(data);
@@ -82,7 +85,7 @@ public class control_server {
         return formatter.Deserialize(stream);
 #pragma warning restore SYSLIB0011
     }
- 
+
     public static byte[] Serialize(object obj) {
         BinaryFormatter formatter = new BinaryFormatter();
         MemoryStream stream = new MemoryStream();
@@ -98,12 +101,11 @@ public class control_server {
         main.my_STT = 0;
 
         main.l = new lobby();
-        Player host = new Player(main.name,null,0,main.money_Start);
+        Player host = new Player(main.name, null, 0, main.money_Start);
         main.l.Players.Add(host);
 
         
-        
+
         Accept_client();
-        
     }
 }

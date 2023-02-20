@@ -15,16 +15,20 @@ public class control_client {
 
     public void Connect_to_server() {
         sk = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-        sk.SendTimeout= 10000;
-        
+        // MessageBox.Show("123123");
         IpServer = new IPEndPoint(IPAddress.Loopback, 9999);
         try {
             sk.Connect(IpServer);
+            if (sk.Connected) {
+                control_view.message("connected");
+            } else {
+                MessageBox.Show("not connect");
+            }
             main.thresh_receive = new Thread(receive);
             main.thresh_receive.IsBackground = true;
             main.thresh_receive.Start();
-        } catch (Exception) {
-            control_view.error("Cannot connect to Host");
+        } catch (Exception e) {
+            MessageBox.Show(e.ToString());
             throw;
         }
     }
