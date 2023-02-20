@@ -75,4 +75,8 @@ public class control_view {
     public static void goToRoom(int x) {
 
     }
+    public static void message(String mess)
+    {
+        MessageBox.Show(mess);
+    }
 }
