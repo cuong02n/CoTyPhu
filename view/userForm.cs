@@ -12,7 +12,7 @@ namespace CoTyPhu.view
 {
     public partial class userForm : Form
     {
-        int check = 0;
+       
         public userForm()
         {
             InitializeComponent();
@@ -33,11 +33,11 @@ namespace CoTyPhu.view
         {
             main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
-            check = check + 1;
+           
             this.Hide();
             mainForm._playForm = new playForm();
             mainForm._playForm.Show();
-            control_view.goToRoom(check,tbUserName.Text);
+            control_view.goToRoom(Int32.Parse(tbRoomId.Text), tbUserName.Text);
         }
 
         private void createButton_Click(object sender, EventArgs e)
