@@ -13,9 +13,10 @@ public class action {
         switch (type) {
             case "room":
                 // TODO
-                if ((int)obj == main.room) {
-                    main.ControlClient.send("name");
-                    main.ControlClient.send(main.name);
+                if (main.room == (int)obj) {
+                    // receive a lobby
+                    main.ControlClient.send("request_lobby");
+                    main.ControlClient.send("tmp");
                 }
                 break;
             case "STT":

@@ -1,3 +1,4 @@
+using CoTyPhu.control.client;
 using CoTyPhu.model;
 
 namespace CoTyPhu.view; 
@@ -73,7 +74,9 @@ public class control_view {
         
     }
     public static void goToRoom(int roomId, string name) {
-
+        main.ControlClient = new control_client();
+        main.ControlClient.send("request_room");
+        main.ControlClient.send(new KeyValuePair<string,int>(name,roomId));
     }
     public static void message(String mess)
     {
