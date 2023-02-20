@@ -42,6 +42,9 @@
             this.tbUserName.Name = "tbUserName";
             this.tbUserName.Size = new System.Drawing.Size(261, 23);
             this.tbUserName.TabIndex = 0;
+            this.tbUserName.TextChanged += new System.EventHandler(this.tbUserName_TextChanged);
+            this.tbUserName.DataContextChanged += new System.EventHandler(this.tbUserName_DataContextChanged);
+            this.tbUserName.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbUserName_KeyPress);
             // 
             // labelName
             // 
