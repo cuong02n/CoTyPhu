@@ -38,6 +38,7 @@ namespace CoTyPhu.view
         public mainForm()
         {
             InitializeComponent();
+            
             CheckForIllegalCrossThreadCalls = false;
         }
 
