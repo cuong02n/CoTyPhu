@@ -82,4 +82,24 @@ public class control_view {
     {
         MessageBox.Show(mess);
     }
+    public static void showPlayForm( int roomId,string name )
+    {
+        main._playForm = new playForm();
+        main._playForm.Show();
+    }
+    public static void showWaitingForm(int roomId,string name) {
+       
+        main.waitingForm = new waitingForm();
+        main.waitingForm.Show();
+    }
+    public static void showUserForm(int roomId,string name)
+    {
+        main.userForm = new userForm();
+        main.userForm.Show();
+    }
+    public static void showMainForm()
+    {
+        main.mainForm = new mainForm();
+        main.mainForm.Show();
+    }
 }

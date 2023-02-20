@@ -28,9 +28,10 @@ namespace CoTyPhu.view
             InitializeComponent();
             nameView.Text = main.name ;
             idView.Text = main.room.ToString();
+            CheckForIllegalCrossThreadCalls = false;
             create(lbPlayer1);
             
-            if (Int32.Parse(lbNumberPlayer.Text) < 2)
+            if (Int32.Parse(lbNumberPlayer.Text) < 2 || lbPlayer2.Text == "")
             {
                 playButton.Enabled = false;
             }
@@ -43,15 +44,13 @@ namespace CoTyPhu.view
         private void playButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            playForm play = new playForm();
-            play.Show();
+            control_view.showPlayForm(main.room, main.name);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm main = new mainForm();
-            main.Show();
+            control_view.showMainForm();
         }
     }
 }

@@ -10,6 +10,8 @@ using CoTyPhu.view;
 class main {
 
     public static long money_Start;
+    public static mainForm mainForm;
+    public static userForm userForm;
     public static playForm _playForm;
     public static waitingForm waitingForm;
     public static string name;

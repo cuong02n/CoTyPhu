@@ -18,6 +18,7 @@ namespace CoTyPhu.view
             InitializeComponent();
             playButton.Enabled = false;
             createButton.Enabled = false;
+            CheckForIllegalCrossThreadCalls = false;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,8 +36,7 @@ namespace CoTyPhu.view
             main.room = Int32.Parse(tbRoomId.Text);
            
             this.Hide();
-            mainForm._playForm = new playForm();
-            mainForm._playForm.Show();
+            control_view.showWaitingForm(main.room, main.name);
             control_view.goToRoom(Int32.Parse(tbRoomId.Text), tbUserName.Text);
         }
 
@@ -45,8 +45,7 @@ namespace CoTyPhu.view
             main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
             this.Hide();
-            mainForm.waiting = new waitingForm();
-            mainForm.waiting.Show();
+            control_view.showWaitingForm(main.room, main.name);
         }
 
         private void tbUserName_TextChanged(object sender, EventArgs e)

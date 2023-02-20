@@ -21,13 +21,13 @@ namespace CoTyPhu.view
             InitializeComponent();
             lbNameP1.Text = main.name;
             lbRoomId.Text = main.room.ToString();
+            CheckForIllegalCrossThreadCalls = false;
         }
         Random rd = new Random();
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainForm main = new mainForm();
-            main.Show();
+            control_view.showMainForm();
         }
 
 
