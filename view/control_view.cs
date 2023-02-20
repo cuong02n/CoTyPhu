@@ -45,7 +45,7 @@ public class control_view {
     
     }
     public static void start(game g) {
-    
+        
     }
     public static void endGame() { 
     
