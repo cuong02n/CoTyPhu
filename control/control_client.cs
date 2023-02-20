@@ -19,11 +19,11 @@ public class control_client {
         IpServer = new IPEndPoint(IPAddress.Loopback, 9999);
         try {
             sk.Connect(IpServer);
-            if (sk.Connected) {
-                control_view.message("connected");
-            } else {
-                MessageBox.Show("not connect");
-            }
+            // if (sk.Connected) {
+            //     control_view.message("connected");
+            // } else {
+            //     MessageBox.Show("not connect");
+            // }
             main.thresh_receive = new Thread(receive);
             main.thresh_receive.IsBackground = true;
             main.thresh_receive.Start();
