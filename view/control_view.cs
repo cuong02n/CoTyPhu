@@ -67,6 +67,7 @@ public class control_view {
     }
 
     public static void display_lobby(lobby l ) {
+        // vào phòng chờ 
         mainForm.showWaitingForm( l.room, l.Players[0].name);
     }
 
