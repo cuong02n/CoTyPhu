@@ -20,11 +20,11 @@ public class control_server {
                 try {
                     Server.Listen(10);
                     Socket s = Server.Accept();
-                    SK_connected.Add(s);
+                    // SK_connected.Add(s);
 
-                    main.thresh_receive = new Thread(receive);
-                    main.thresh_receive.IsBackground = true;
-                    main.thresh_receive.Start(s);
+                    Thread th = new Thread(receive);
+                    th.IsBackground = true;
+                    th.Start(s);
                 } catch (Exception e) {
                     Console.WriteLine(e);
                     throw;
@@ -98,7 +98,10 @@ public class control_server {
         main.my_STT = 0;
 
         main.l = new lobby();
-        // Player host = new Player();
+        Player host = new Player(main.name,null,0,main.money_Start);
+        main.l.Players.Add(host);
+
+        
         
         Accept_client();
         

@@ -8,11 +8,12 @@ namespace CoTyPhu;
 using CoTyPhu.view;
 
 class main {
+
+    public static long money_Start;
     public static playForm _playForm;
     public static waitingForm waitingForm;
     public static string name;
     public static int room;
-    public static int room_receive_from_server;
     public static lobby l;
     public static game g;
     public static bool is_server = false;

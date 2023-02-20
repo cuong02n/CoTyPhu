@@ -44,7 +44,7 @@ public class control_view {
     public static void render() { 
     
     }
-    public static void start(int numberPlayer) {
+    public static void start(game g) {
     
     }
     public static void endGame() { 
