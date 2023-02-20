@@ -37,7 +37,7 @@ namespace CoTyPhu.view
             this.Hide();
             mainForm._playForm = new playForm();
             mainForm._playForm.Show();
-            control_view.goToRoom(check);
+            control_view.goToRoom(check,tbUserName.Text);
         }
 
         private void createButton_Click(object sender, EventArgs e)
