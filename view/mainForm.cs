@@ -17,6 +17,7 @@ namespace CoTyPhu.view
         public mainForm()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
