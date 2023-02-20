@@ -72,7 +72,7 @@ public class control_view {
     public static void display_game(game g) {
         
     }
-    public static void goToRoom(int x) {
+    public static void goToRoom(int roomId, string name) {
 
     }
     public static void message(String mess)
