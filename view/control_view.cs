@@ -1,3 +1,4 @@
+using CoTyPhu.control;
 using CoTyPhu.control.client;
 using CoTyPhu.model;
 
@@ -77,7 +78,8 @@ public class control_view {
     public static void goToWaitPlayer(int roomId,string name)
     {
         // vao phong cho`
-
+        main.ControlServer = new control_server();
+        display_lobby(main.l);
     }
     public static void goToRoom(int roomId, string name) {
         main.ControlClient = new control_client();
