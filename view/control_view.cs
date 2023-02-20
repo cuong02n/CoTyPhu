@@ -73,7 +73,7 @@ public class control_view {
     public static void display_game(game g) {
         
     }
-    public void goToRoom(int x) {
+    public static void goToRoom(int x) {
 
     }
 }

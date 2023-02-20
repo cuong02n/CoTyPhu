@@ -12,9 +12,11 @@ public class action {
     public static void process(string type, object obj) {
         switch (type) {
             case "room":
-                main.ControlServer.send("room");
-                main.ControlServer.send(main.l.room);
-                main.room_receive_from_server = (int)obj;
+                // TODO
+                if ((int)obj == main.room) {
+                    main.ControlClient.send("name");
+                    main.ControlClient.send(main.name);
+                }
                 break;
             case "STT":
                 main.my_STT = (int)obj;
@@ -24,7 +26,7 @@ public class action {
                 control_view.display_lobby(main.l);
                 break;
             case "start":
-                control_view.start((int)obj);
+                control_view.start((game)obj);
                 break;
             case "game":
                 main.g = (game)obj;
@@ -54,6 +56,9 @@ public class action_server {
                 // return the main.l.room
                 main.ControlServer.single_send(client, "room");
                 main.ControlServer.single_send(client, main.l.room);
+                if ((int)obj == main.l.room) {
+                    main.ControlServer.SK_connected.Add(client);
+                }
                 break;
             case "request_lobby":
                 main.ControlServer.send("lobby");
@@ -67,8 +72,8 @@ public class action_server {
                         break;
                     }
                 }
-
                 break;
+            
         }
     }
 }

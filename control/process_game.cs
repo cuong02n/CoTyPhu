@@ -39,8 +39,8 @@ public class process_game {
         return -1;
     }
 
-    public static void startgame() {
-        control_view.start(main.g.number_of_players);
+    public static void startgame(game g) {
+        control_view.start(g);
     }
 
     public static void endgame() {
