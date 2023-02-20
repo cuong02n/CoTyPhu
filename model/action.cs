@@ -26,7 +26,7 @@ public class action {
                 control_view.display_lobby(main.l);
                 break;
             case "start":
-                control_view.start((game)obj);
+                // control_view.start((game)obj);
                 break;
             case "game":
                 main.g = (game)obj;
@@ -56,8 +56,11 @@ public class action_server {
                 // return the main.l.room
                 main.ControlServer.single_send(client, "room");
                 main.ControlServer.single_send(client, main.l.room);
-                if ((int)obj == main.l.room) {
+                KeyValuePair<string, int> name_room = (KeyValuePair<string, int>)obj;
+                if (name_room.Value == main.l.room) {
                     main.ControlServer.SK_connected.Add(client);
+                    Player player = new Player(name_room.Key, client, main.l.Players.Count, main.money_Start);
+                    main.l.Players.Add(player);
                 }
                 break;
             case "request_lobby":

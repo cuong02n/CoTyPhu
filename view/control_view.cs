@@ -44,9 +44,8 @@ public class control_view {
     public static void render() { 
     
     }
-    public static void start(int numberPlayer) {
+
     
-    }
     public static void endGame() { 
     
     }
@@ -75,5 +74,9 @@ public class control_view {
     }
     public static void goToRoom(int x) {
 
+    }
+    public static void message(String mess)
+    {
+        MessageBox.Show(mess);
     }
 }
