@@ -36,7 +36,7 @@ namespace CoTyPhu.view
             main.room = Int32.Parse(tbRoomId.Text);
            
             this.Hide();
-            control_view.showWaitingForm(main.room, main.name);
+            mainForm.showWaitingForm(main.room, main.name);
             control_view.goToRoom(Int32.Parse(tbRoomId.Text), tbUserName.Text);
         }
 
@@ -45,7 +45,7 @@ namespace CoTyPhu.view
             main.name = tbUserName.Text;
             main.room = Int32.Parse(tbRoomId.Text);
             this.Hide();
-            control_view.showWaitingForm(main.room, main.name);
+            mainForm.showWaitingForm(main.room, main.name);
         }
 
         private void tbUserName_TextChanged(object sender, EventArgs e)

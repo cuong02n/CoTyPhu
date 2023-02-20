@@ -67,7 +67,7 @@ public class control_view {
     }
 
     public static void display_lobby(lobby l ) {
-        mainForm.waiting.displayLobby(l);
+        mainForm.showWaitingForm( l.room, l.Players[0].name);
     }
 
     public static void display_game(game g) {
@@ -81,25 +81,5 @@ public class control_view {
     public static void message(String mess)
     {
         MessageBox.Show(mess);
-    }
-    public static void showPlayForm( int roomId,string name )
-    {
-        main._playForm = new playForm();
-        main._playForm.Show();
-    }
-    public static void showWaitingForm(int roomId,string name) {
-       
-        main.waitingForm = new waitingForm();
-        main.waitingForm.Show();
-    }
-    public static void showUserForm(int roomId,string name)
-    {
-        main.userForm = new userForm();
-        main.userForm.Show();
-    }
-    public static void showMainForm()
-    {
-        main.mainForm = new mainForm();
-        main.mainForm.Show();
     }
 }
