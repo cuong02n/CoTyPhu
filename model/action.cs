@@ -26,7 +26,7 @@ public class action {
                 control_view.display_lobby(main.l);
                 break;
             case "start":
-                control_view.start((game)obj);
+                // control_view.start((game)obj);
                 break;
             case "game":
                 main.g = (game)obj;

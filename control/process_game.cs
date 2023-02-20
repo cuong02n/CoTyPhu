@@ -40,7 +40,7 @@ public class process_game {
     }
 
     public static void startgame(game g) {
-        control_view.start(g);
+        // control_view.start(g);
     }
 
     public static void endgame() {
