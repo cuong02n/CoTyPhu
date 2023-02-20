@@ -27,7 +27,7 @@ namespace CoTyPhu.view
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            control_view.showMainForm();
+            mainForm.showMainForm();
         }
 
 

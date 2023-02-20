@@ -44,13 +44,13 @@ namespace CoTyPhu.view
         private void playButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            control_view.showPlayForm(main.room, main.name);
+            mainForm.showPlayForm(main.room, main.name);
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            control_view.showMainForm();
+            mainForm.showMainForm();
         }
     }
 }
